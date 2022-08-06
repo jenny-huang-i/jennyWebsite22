@@ -28,6 +28,17 @@ a {
     text-align: center;
     padding: 0 2em;  /*== two times the current font"*/
     z-index: 1;
+    
+}
+.contactsST{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+    position: sticky;
+    text-align: center;
+    padding: 12em 2em;  /*== two times the current font"*/
+    z-index: 1;
 }
 .aSection{
     z-index: 0;
@@ -102,6 +113,25 @@ a {
     letter-spacing: .2em;
     margin: 0 auto;
     animation: typing 2s steps(30, end), blink .5s step-end infinite;
+}
+
+.typingText {
+    display: flex;
+    justify-content: center;
+}
+.tt{
+
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+    white-space:nowrap;
+    font-size: 2em;
+    border-right: .15em solid red;
+    letter-spacing: .2em;
+    margin: 0 auto;
+}
+.typingTextAnimation {
+    animation: typing 3s steps(30, end), blink .5s step-end infinite;
+
 }
 
 @keyframes typing {
@@ -243,3 +273,103 @@ a {
     opacity: 0.8;
 }
 
+/* Icons / Contacts Page */
+.contactIcons {
+    
+    display: inline-block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -ms-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+      
+}
+
+
+/* Icons */
+
+.icons{
+    color:#fff;
+    background: orange;
+    border-radius:4px;
+    text-align:center;
+    text-decoration:none;
+    font-family:fontawesome;
+    position: relative;
+    display: inline-block;
+    width:40px;
+    height:28px;
+    padding-top:12px;
+    margin:0 2px;
+    -o-transition:all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+     -webkit-font-smoothing: antialiased;
+  }
+  
+.icons:hover {
+    background: rgb(236, 199, 130);
+  }
+  
+  /* pop-up text */
+  
+.icons span {
+    color:#666;
+    position:absolute;
+    font-family:sans-serif;
+    bottom:0;
+    left:-25px;
+    right:-25px;
+    padding:5px 7px;
+    z-index:-1;
+    font-size:14px;
+    border-radius:2px;
+    background:#fff;
+    visibility:hidden;
+    opacity:0;
+    -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  /* pop-up text arrow */
+  
+.icons span:before {
+    content:'';
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position:absolute;
+    bottom:-5px;
+    left:40px;
+  }
+  
+  /* text pops up when icon is in hover state */
+  
+.icons:hover span {
+    bottom:50px;
+    visibility:visible;
+    opacity:1;
+  }
+
+
+  /* font awesome icons */
+
+.icons:nth-of-type(1):before {
+    content:'\f0e0';
+}
+.icons:nth-of-type(2):before {
+content:'\f09a';
+}
+.icons:nth-of-type(3):before {
+content:'\f08c';
+}
+.icons:nth-of-type(4):before {
+content:'\f09b';
+
+}
